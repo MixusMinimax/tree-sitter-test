@@ -60,6 +60,7 @@ async function main() {
 
     for (const name in examples) {
         console.log(`Running example ${name}`)
+        console.log()
         examples[name](parser)
     }
 }
