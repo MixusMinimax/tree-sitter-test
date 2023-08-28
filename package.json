@@ -1,0 +1,44 @@
+{
+  "name": "tree-sitter-test",
+  "version": "0.1.0",
+  "description": "Language definition",
+  "main": "bindings/node",
+  "scripts": {
+    "build": "tree-sitter generate && node-gyp build",
+    "parse": "tree-sitter parse",
+    "test": "tree-sitter test",
+    "build-wasm": "tree-sitter build-wasm",
+    "test-windows": "tree-sitter test",
+    "test-node": "npm run build-wasm && tsc && node node-dist/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MixusMinimax/tree-sitter-test.git"
+  },
+  "keywords": [
+    "tree-sitter"
+  ],
+  "author": "Maxi <maxi.barmetler@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MixusMinimax/tree-sitter-test/issues"
+  },
+  "homepage": "https://github.com/MixusMinimax/tree-sitter-test#readme",
+  "dependencies": {
+    "@types/node": "^20.5.7",
+    "nan": "^2.17.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.7",
+    "typescript": "^5.2.2",
+    "web-tree-sitter": "^0.20.8"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.test",
+      "file-types": [
+        "test"
+      ]
+    }
+  ]
+}
