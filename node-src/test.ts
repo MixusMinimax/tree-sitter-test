@@ -4,6 +4,11 @@ import Parser = require('web-tree-sitter')
 const examples: Record<string, (parser: Parser) => void> = {
     example1(parser: Parser) {
         const code = 'module core::event;'
+
+        console.log('Code:')
+        console.log(code)
+        console.log()
+
         const tree = parser.parse(code)
 
         console.log('Tree:')
